@@ -3,10 +3,10 @@ def valid_move? (board, position)
   position = position.to_i
   if position_taken?(board, position)
     false
-  elsif position.between?(1,9) == false
-    false
-  else
+  elsif position.between?(1,9) 
     true
+  else
+    false
   end
 end
 
