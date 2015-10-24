@@ -1,4 +1,6 @@
 # code your #valid_move? method here
+
+#seems like i should have used relative_required to call this method from the other file rather than copy/paste
 def position_taken?(board, spot)
   if board[spot] == ""
     false
