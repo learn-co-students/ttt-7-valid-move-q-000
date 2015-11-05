@@ -3,7 +3,7 @@ def valid_move?(board,pos)
   posNum = pos.to_i
   if position_taken?(board,posNum)==false && posNum.between?(1,9)
     true
-  elsif position_taken?(board,posNum) == true
+  elsif position_taken?(board,posNum) == true || posNum.between?(1,9) == false
     false
   end
 end
