@@ -1,7 +1,7 @@
 # all this needs to be fixed... i messed with it without looking
 # code your #valid_move? method here
 def valid_move?(board, position)
-  if position.to_i.between?(0, 8) && !position_taken?(board, position)
+  if position.to_i.between?(1, 9) && !position_taken?(board, position)
     true
   else
     false
