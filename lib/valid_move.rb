@@ -5,7 +5,6 @@ def valid_move?(board, position)
   valid_position = position.between?(0, 8)
   pt = position_taken?(board, position)
   
-
   (valid_position && !pt) ? true : false 
 
 end
