@@ -2,7 +2,7 @@
 
 def valid_move?(board, position)
   value = position.to_i - 1
-  if value <= 8 && position_taken?(board, position) != true
+  if value >= 0 && value <= 8 && position_taken?(board, position) != true
     true
   end
 end
