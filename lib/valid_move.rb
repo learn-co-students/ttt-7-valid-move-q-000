@@ -7,11 +7,9 @@ end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, position) # pull user input/board
-  if board[position.to_i - 1] == " " || board[position.to_i - 1] == "" || board[position.to_i - 1] == nil
-    false
-  elsif board[position.to_i - 1] == "X" || board[position.to_i - 1] == "O"
-    true
-  end
+  return false if board[position] == " " # False if the position is empty
+  return false if board[position] == "" # False if the position is edge
+  return true if board[position] == "X" || board[position] == "O"
 end
 
 # range = 1-9
