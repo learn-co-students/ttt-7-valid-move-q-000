@@ -1,7 +1,12 @@
 require_relative "../lib/valid_move.rb"
 
 describe './lib/valid_move.rb' do
-  # Needs more specs
+  it 'accepts a board and the position to check as arguments' do
+    board = []
+    position = 0
+
+    expect{valid_move?(board, position)}.to_not raise_error
+  end
 
   it 'returns true for a valid position on an empty board' do
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
