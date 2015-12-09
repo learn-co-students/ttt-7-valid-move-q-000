@@ -3,18 +3,16 @@ require_relative "./position_taken7.rb"
 
 def valid_move?(board, position)
 position= position.to_i - 1
-if !(position_taken?(board, position))
 
+  if position_taken?(board, position)
+  return false
 
-    if position.between?(0,8)
+  elsif position.between?(0,8)
      return true
-    elsif position < 0 || position > 8
+  elsif position < 0 || position > 8
       return false
 
-
-    end
-
-end
+  end
 
 end
 
