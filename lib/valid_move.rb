@@ -2,7 +2,7 @@
 
 def valid_move?(board, i)
 
-  if board[i.to_i-1] == "X" || board[i.to_i-1] == "O" || i.to_i-1 < 0 || i.to_i-1 > 8
+  if board[i.to_i-1] == "X" || board[i.to_i-1] == "O" || i.to_i < 1 || i.to_i > 9
     valid = false
 
     else
