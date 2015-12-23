@@ -1,4 +1,20 @@
-# code your #valid_move? method here
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+def valid_move?(board, location)
+  if location.to_i.between?(1,9) && !position_taken?(board, location)
+    true
+  else
+    false
+  end
+end
 
+def position_taken?(board, location)
+ if board[location.to_i-1]!= " "
+  true
+ else
+   false
+ end
+end
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+#position.to.i.between and position.between both work for  returns true for a valid position on an empty board
+#since we are calling upon position_taken? method , we have to remember to pass the same arguments through it as valid_move?
+#also, since we are calling upon a previous method in position_taken? in valid_move?, there is no need to have to manipulate board[location.to_i-1] in valid_move?, as it is already done in position_taken?.
