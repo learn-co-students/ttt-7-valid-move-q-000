@@ -19,22 +19,3 @@ def position_taken?( board, position )
 end
 
 
-=begin
-def position_taken?( board, position )
-  position = position.to_i
-  if board[position] == "X" || board[position] == "O"
-    return true
-  else
-    return false
-  end
-end
-
-=end
-
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
-
-
-#def move(array, position, value="X")
-#  array[position.to_i - 1] = value
-  #display_board(array)
-#end
