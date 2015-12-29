@@ -1,26 +1,20 @@
-def valid_move?(board, position)
 
-        position = position.to_i-1
+# code your #valid_move? method here
+def valid_move?(board,position)
+  if position.to_i.between?(1,9) && !position_taken?(board,position)
+       true
+else
+      false
+     end
+   end
+# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+ def position_taken?(board,position)
+  if board[position.to_i-1]==" "
+    false
+    else
+      true
+   end
+ end
 
 
-        if position >= 0 && position <= 8 && board[position] == " "
-                return true
 
-        else board[position] == "X" || board[position] == "O"
-                return false
-
-        end
-
-        end
-
-def position_taken?(board, position)
-if board[0]== " " || nil
-    return false
-  elsif board[0]== ""
-    return false
-  elsif board[0]== nil
-    return false
-  else
-    return true
-  end
-end
