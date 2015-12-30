@@ -1,7 +1,7 @@
 def valid_move?(board,position)
   if position_taken?(board,position.to_i-1)
     return false
-  elsif position.to_i != 1..9
+  elsif !((position.to_i >= 1) && (position.to_i <= 9))
     return false || nil
   else
     return true
