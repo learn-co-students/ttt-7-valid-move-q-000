@@ -2,16 +2,13 @@ def valid_move?(board, position)
 
         position = position.to_i-1
 
-
         if position >= 0 && position <= 8 && board[position] == " "
                 return true
 
         else position_taken?(board, position) != false
                 return false
-
         end
-
-        end
+end
 
 def position_taken?(board, position)
 
