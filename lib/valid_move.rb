@@ -1,12 +1,12 @@
 # code your #valid_move? method here
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+#board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 
 def valid_move?(board, position)
 
   position = position.to_i - 1
 
-  if (position.between?(0, 10) ? true : false) && (position_taken?(board, position) == false)
+  if (position.between?(0, 10) == true)  && (position_taken?(board, position) == false)
     true
 
   else position_taken?(board, position) == true
@@ -20,15 +20,11 @@ end
 
 
 def position_taken?(board, position)
-
-  if (board[position] == "X") || (board[position] == "O") ? true : false
-    true
-
-  elsif
-    board.any? {" "}
+  if board[position] == " " || board[position] == ""
     false
-
-
+  elsif board[position] == nil
+    false
+  elsif board[position] == "X" || board[position] == "O"
+    true
   end
-
 end
