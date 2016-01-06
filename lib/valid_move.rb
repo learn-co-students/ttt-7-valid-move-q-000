@@ -6,7 +6,7 @@ def valid_move?(board, position)
 
   position = position.to_i - 1
 
-  if (position.between?(0, 10) == true)  && (position_taken?(board, position) == false)
+  if (position.between?(0, 9) == true)  && (position_taken?(board, position) == false)
     true
 
   else position_taken?(board, position) == true
