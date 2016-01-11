@@ -2,7 +2,7 @@
 def valid_move?(board, position)
   if board[position.to_i - 1] == " " || board[position.to_i - 1] == "" && board[position.to_i - 1] == between?(1, 9)
     true
-  elsif board[position.to_i - 1] != " " || board[position.to_i - 1] != "" && board[position.to_i - 1] != between?(1, 9)
+  elsif
     false
   end
 end
