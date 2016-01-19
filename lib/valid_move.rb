@@ -5,8 +5,6 @@ def valid_move?(board, position)
     return false
   elsif board[position.to_i-1] == " "
     true
-  else
-    false
   end
 end
 
