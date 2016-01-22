@@ -1,4 +1,22 @@
-# code your #valid_move? method here
+def valid_move?(board, position)
+#   if 
+    (1..9).include?(position.to_i) && !position_taken?(board, position.to_i-1)
+#     return true
+#   else
+#     return false
+#   end
+end
 
+def position_taken?(board, position)
+  if board[position] == "X" || board[position] == "O"
+    return true
+  end
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+  if board[position] == " " || ""
+    return false
+  elsif board[position] == "nil"
+    return false
+  else
+    return false
+  end
+end
