@@ -1,6 +1,6 @@
 def valid_move?(board, position)
   position = position.to_i - 1
-  if position_on_board?(board, position) && !occupied?(board, position)
+  if position_on_board?(board, position) == true && !occupied?(board, position)
     true
   end
 end
