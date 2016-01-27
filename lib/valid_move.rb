@@ -1,8 +1,5 @@
 def valid_move?(board, position)
-  position = position.to_i - 1
-  if position_on_board?(board, position) && !occupied?(board, position)
-    true
-  end
+  position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
 end
 
 def position_on_board?(board, position)
@@ -13,10 +10,15 @@ def position_on_board?(board, position)
   end
 end
 
-def occupied?(board, position)
-  if board[position].include?("X") || board[position].include?("O")
-    true
-  else
-    false
-  end
+
+def position_taken?(board, location)
+  board[location] != " "
 end
+
+# def occupied?(board, position)
+#   if board[position].include?("X") || board[position].include?("O")
+#     true
+#   else
+#     false
+#   end
+# end
