@@ -3,22 +3,14 @@ def valid_move?(board, position)
 end
 
 def position_on_board?(board, position)
-  if position <= board.count
-    true
-  else
-    false
-  end
+  (position <= board.count) ? true : false
+  # if position <= board.count
+  #   true
+  # else
+  #   false
+  # end
 end
-
 
 def position_taken?(board, location)
   board[location] != " "
 end
-
-# def occupied?(board, position)
-#   if board[position].include?("X") || board[position].include?("O")
-#     true
-#   else
-#     false
-#   end
-# end
