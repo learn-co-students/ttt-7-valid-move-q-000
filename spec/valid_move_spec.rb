@@ -13,7 +13,7 @@ describe './lib/valid_move.rb' do
     board = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
     position = "5"
     
-    expect(valid_move?(board, position)).to be_falsey
+    expect(valid_move?(board, position)).to be_truthy
   end
 
   it 'returns nil or false for a position that is not on the board' do 
