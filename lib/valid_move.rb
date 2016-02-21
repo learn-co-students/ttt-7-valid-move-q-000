@@ -15,3 +15,10 @@ def position_taken?(board, int)
     false
   end
 end
+
+def valid_move?(board, position)
+  position = position.to_i - 1
+  if position.between?(0, 8) == true && position_taken?(board, position) == false
+    true
+  end
+end
