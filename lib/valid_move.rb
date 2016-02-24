@@ -1,4 +1,18 @@
-# code your #valid_move? method here
+require 'pry'
 
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def valid_move?(board, position)
+  !!(!position_taken?(board,position) && on_board?(board,position))
+end
+
+def position_taken?(board, position)
+  !!(board[position.to_i - 1] == "X" || board[position.to_i - 1] == "O")
+end
+
+def on_board?(board, position)
+  board[position.to_i - 1] != nil
+end
+
+
+
+
