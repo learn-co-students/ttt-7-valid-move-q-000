@@ -1,26 +1,16 @@
-# code your #valid_move? method here
-def valid_move?(board, user_input)
-  user_input = user_input.to_i
-  if user_input > 0 && user_input < 10
-    if position_taken?(board, user_input) == false
-      return true
-    else
-      return false
-    end
+#takes an array representing the board
+#takes a position (1-9) as a string
+def valid_move?(board, position)
+  if position.to_i.between?(1, 9)
+    return position_taken?(board, position.to_i) == false
   else
     return false
   end
 end
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+#takes an array representing the board
+#takes a position (1-9) as a number, make account for one off difference
 def position_taken?(board, position)
-  if board[position-1] == ' '
-    return false
-  elsif board[position-1] == ''
-    return false
-  elsif board[position-1] == nil
-    return false
-  elsif board[position-1] == 'X' || board[position-1] == 'O'
-    return true
-  end
+  return board[position-1] == ' ' || board[position-1] == '' || board[position-1] == nil ? 
+         false : true
 end
