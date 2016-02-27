@@ -7,8 +7,6 @@ if position_taken?(board,position.to_i-1) == false && (position.to_i-1).between?
   end
 end
 
-
-
 def position_taken?(board, position)
   if board[position] == " " || board[position] == ""
       false
