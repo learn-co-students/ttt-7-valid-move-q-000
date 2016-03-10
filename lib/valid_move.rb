@@ -2,6 +2,8 @@
 def valid_move?(board,position)
   if (!(position.is_a? Integer))
     position = position.to_i-1
+   else
+    position = position -1
   end
   if((0..8) === position &&!(position_taken?(board,position)))
     return true
