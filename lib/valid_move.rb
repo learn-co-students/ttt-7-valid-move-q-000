@@ -18,11 +18,9 @@ end
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, position)
   playerToken = "X"
-  if board[position].include?(playerToken)
+  if board[position-1].include?(playerToken)
     return false
    else
     return true
   end
 end
-
-valid_move?(board, position)
