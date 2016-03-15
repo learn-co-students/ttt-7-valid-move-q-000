@@ -1,4 +1,6 @@
 # code your #valid_move? method here
+
+
 def valid_move?(board,position)
   if (!(position.is_a? Integer))
     position = position.to_i-1
@@ -19,4 +21,14 @@ def position_taken?(board,position)
   elsif(board[position]=="X"||board[position]=="O")
     return true
   end
+end
+
+def display_board(board)
+  board = board.reverse
+  seperator = "-----------"
+  print(" #{board.pop} | #{board.pop} | #{board.pop} \n")
+  puts(seperator)
+  print(" #{board.pop} | #{board.pop} | #{board.pop} \n")
+  puts(seperator)
+  print(" #{board.pop} | #{board.pop} | #{board.pop} \n")
 end
