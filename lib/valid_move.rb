@@ -7,8 +7,6 @@ if index == 0
   return true
   elsif index.between?(0,8) == true
   true
-  elsif index == 8
-  true
   else
   false
 end
