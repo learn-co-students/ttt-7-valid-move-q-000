@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/valid_move.rb'
+
+board = ["1", " ", " ", " ", " ", " ", " ", " ", " "]
+
+position = "1"
+
+
+puts valid_move?(board, position)
+
