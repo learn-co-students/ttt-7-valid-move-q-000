@@ -1,5 +1,6 @@
 require_relative "../lib/valid_move.rb"
 
+
 describe './lib/valid_move.rb' do
   # Needs more specs
 
@@ -22,5 +23,4 @@ describe './lib/valid_move.rb' do
 
     expect(valid_move?(board, position)).to be_falsey
   end
-
 end
