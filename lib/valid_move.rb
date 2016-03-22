@@ -2,7 +2,9 @@
 def valid_move? (board, position)
   if position.to_i < 1 || position.to_i > 9
     false
-  else !position_taken?(board, position.to_i - 1)
+  elsif position_taken?(board, position.to_i - 1)
+    false
+  else
     true
   end
 end
