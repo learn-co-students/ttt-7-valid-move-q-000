@@ -2,7 +2,6 @@
 def valid_move?(board, position_str)
   position_plus_one = position_str.to_i
   position = position_plus_one - 1
-  its_free = !(position_taken?(board, position))
   if position.between?(0, 10)
     !(position_taken?(board, position))
   end
