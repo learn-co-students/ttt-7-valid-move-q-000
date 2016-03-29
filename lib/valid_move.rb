@@ -1,10 +1,8 @@
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 def valid_move?(board, position)
-  if board[position.to_i - 1].between?(0, 8) == true
-    position_taken?(board, position)
-  else
-    false || nil
+  if position.to_i-1.between?(0, 8) == true
+    position_taken(board, position)
   end
 end
 
