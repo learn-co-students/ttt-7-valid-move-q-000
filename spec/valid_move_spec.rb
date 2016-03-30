@@ -24,3 +24,6 @@ describe './lib/valid_move.rb' do
   end
 
 end
+
+
+  
