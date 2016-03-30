@@ -23,4 +23,11 @@ describe './lib/valid_move.rb' do
     expect(valid_move?(board, position)).to be_falsey
   end
 
+  it 'returns nil or false for a position that is not an integer' do 
+    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    position = "y"
+    
+    expect(valid_move?(board, position)).to be_falsey
+  end
+
 end
