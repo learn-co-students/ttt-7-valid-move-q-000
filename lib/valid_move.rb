@@ -4,7 +4,7 @@ def valid_move?(board, position)
     if position_taken?(board, position) #== false || board[position].between(1,9)
       return true
 #       position_taken?(board, position) == true  ||
-      elsif  board[position]!=(1..10).to_i
+      elsif  board[position.gets.to_i]!=(1..10)
       return false
 
 #     board[(position.to_i) -1 ]=position.gets
