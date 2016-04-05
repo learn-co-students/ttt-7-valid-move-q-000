@@ -3,23 +3,20 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 def valid_move?(board, position)
 index = position.to_i - 1
-if index == 0
+
+if position_taken?(board, index) == true
+   false
+elsif (0..8).cover?(index) == true
   return true
-  elsif index.between?(0,8) == true
-  true
   else
   false
-end
-
-if position_taken?(board, position) == true
-  nil
 end
 end
 
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, position)
-  location = position.to_i
+  location = position.to_i ####THE ERROR HERE IS THAT YOU NEED TO CONVERT THE POSITION TO INDEX BEFORE YOU USE USE IT AS AN INDEX BELOW
   if board[location] == " "
     false
    elsif board[location] == ""
