@@ -4,10 +4,7 @@ def valid_move?(board, position)
  if(position.between?(1,9))
    position -=1
    if(position_taken?(board, position))
-     if(board == [" ", " ", " ", " ", " ", " ", " ", " ", " "])
 
-
-     end
    end
  end
 end
