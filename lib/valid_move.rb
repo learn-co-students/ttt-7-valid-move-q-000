@@ -1,15 +1,13 @@
 def valid_move?(board, position)
-
-  position = position.to_i - 1
-
-  if position_taken?(board, position) == false && position.between?(0, 8)
-    return true
-  elsif position_taken?(board, position)
-    return false
-  else
-    return false
+  
+  if position.to_i.between?(1, 9)
+    if !position_taken?(board, position.to_i - 1)
+      return true
+    end
   end
-
+  
+  return false
+  
 end
 
 def position_taken?(board, position)
