@@ -3,7 +3,8 @@
 
 
 def valid_move?(board, position)
-  if position_taken?(board, position) && (position.to_i-1.between?(0, 8))
+girrafe = position.to_i-1
+  if position_taken?(board, position) && (girrafe.between?(0, 8))
     return true
   else
     return false
@@ -16,8 +17,10 @@ end
 
 def position_taken?(board, position)
   if board[position.to_i-1] != " "
-    return true
-  else
     return false
+  else
+    return true
   end
 end
+
+
