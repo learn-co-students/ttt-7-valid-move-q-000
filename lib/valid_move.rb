@@ -1,4 +1,5 @@
 def position_taken?(board, position)
+position = position.to_i
   if board[position] == " "
     false
   elsif board[position] == ""
@@ -12,20 +13,8 @@ def position_taken?(board, position)
   end
 end
 
-def within_board?(board, position)
-  if board[position] < 0 && board[position] > 8
-    false
-  else board[position] >= 0 && board[position] <= 8
-    true
-  end
-end
 
 def valid_move?(board, position)
-  if !position_taken? && within_board?
-    true
-  else
-    false
-  end
+  position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
 end
-
 
