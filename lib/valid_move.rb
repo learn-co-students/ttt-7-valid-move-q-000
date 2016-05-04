@@ -10,7 +10,7 @@ def valid_move?(board, position)
   else
     valid = false
   end
-  
+
   valid
 end
 
