@@ -1,32 +1,3 @@
-
-Skip to content
-Personal
-Open source
-Business
-Explore
-Pricing
-Blog
-Support
-This repository
-
-1
-0
-
-    656
-
-playto/ttt-7-valid-move-q-000 forked from learn-co-students/ttt-7-valid-move-q-000
-Code
-Pull requests 0
-Pulse
-Graphs
-ttt-7-valid-move-q-000/lib/valid_move.rb
-301953d on Oct 13, 2015
-@playto playto Done.
-@aviflombaum
-@sammarcus
-@playto
-@SophieDeBenedetto
-19 lines (17 sloc) 493 Bytes
 # code your #valid_move? method here
 def valid_move?(board, position)
   num = position.to_i - 1
