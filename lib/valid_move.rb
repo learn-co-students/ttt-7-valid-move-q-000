@@ -16,9 +16,8 @@ def position_taken?(board, position)
     # if position on the board is empty, or nil then the board is not taken
     if board[position] == "" || board[position] == " " || board[position] == nil
         return false
-    # if the position on the board has either "X" or "O" 
-    # then the position is taken
-    else board[position] == "X" || board[position] == "O"
+    # else if the board is not empty, then the position is taken
+    else 
         return true
     end
 end
