@@ -1,9 +1,9 @@
-# code your #valid_move? method here
+# code your #valid_move? method herearn
 
 def valid_move?(board, position)
   if board[position.to_i-1] == " "
     return true
-  else 
+  else
     return false
   end
 end
@@ -13,11 +13,11 @@ end
 def position_taken?(board, position)
     if board[position] == " " || board[position] == ""  || board[position] == nil
       return false
-    else 
+    else
       return true
         if board[position] == "X" || board[position] == "O"
           return true
-        else 
+        else
           return false
         end
     end
