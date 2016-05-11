@@ -7,7 +7,6 @@ end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, position)
-  position = position.to_i - 1
   if board[position] == "X" || board[position] == "0"
     true
   elsif board[position] == " " || board[position] == ""
