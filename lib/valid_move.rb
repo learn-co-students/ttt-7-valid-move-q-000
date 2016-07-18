@@ -16,7 +16,7 @@ def position_taken?(board, index)
 
   if ['', ' ', nil].include?(position)
     return false
-  elsif ['X', 'O'].include?(position)
+  else
     return true
   end
   
