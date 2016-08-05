@@ -1,4 +1,5 @@
 require_relative "../lib/valid_move.rb"
+require_relative "../lib/position_taken.rb"
 
 describe './lib/valid_move.rb' do
 
