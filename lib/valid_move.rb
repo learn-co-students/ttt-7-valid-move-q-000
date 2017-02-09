@@ -1,6 +1,6 @@
 def valid_move?(board, input)
   # index = input - 1 assumed this should be used to convert input to index
-  if position_taken?(board, input) == false && input.between?(0, 8)
+  if input.between?(0, 8) && position_taken?(board, input) == false
     return true
   else
     return false
