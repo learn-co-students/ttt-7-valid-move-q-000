@@ -1,4 +1,5 @@
 require_relative "../lib/valid_move.rb"
+require_relative "../lib/position_taken.rb" #added as position_taken method was saved in a separate file
 
 describe './lib/valid_move.rb' do
   it 'returns true for a valid position on an empty board' do
