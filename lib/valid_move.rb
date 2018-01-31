@@ -1,4 +1,18 @@
-# code your #valid_move? method here
+def valid_move?(array, input)
+  position = "#{input}".to_i - 1
+  if position.between?(0, 8) == true && position_taken?(array, position) == false
+    true
+  else
+    false
+  end
+end
 
-
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def position_taken?(array, position)
+  if array[position] == "" || array[position] == " "
+    false
+  elsif array[position] == "X" || array[position] == "O"
+    true
+  else
+    false
+  end
+end
