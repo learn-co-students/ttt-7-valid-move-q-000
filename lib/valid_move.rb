@@ -1,4 +1,11 @@
-# code your #valid_move? method here
+def valid_move?(board, position)
+  return true unless position.to_i > (board.length + 1) ||
+                     position_taken?(board, position) == true 
+  false
+end
 
-
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def position_taken?(board, position)
+  index = position.to_i - 1
+  return false unless board[index] =~ /[XO]/
+  true
+end
